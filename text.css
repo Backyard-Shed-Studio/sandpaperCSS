@@ -1,0 +1,35 @@
+.textAlignRight {text-align: right;}
+.textAlignCenter {text-align: center;}
+
+.italic {font-style: italic;}
+.underline {text-decoration: underline;}
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.capitalize {text-transform: capitalize;}
+
+.ellipsis {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.whiteSpacePreWrap {white-space: pre-wrap;}
+
+.weight1 {font-weight: 100;}
+.weight2 {font-weight: 200;}
+.weight3 {font-weight: 300;}
+.weight4 {font-weight: 400;}
+.weight5 {font-weight: 500;}
+.weight6 {font-weight: 600;}
+.weight7 {font-weight: 700;}
+.weight8 {font-weight: 800;}
+.Weight9 {font-weight: 900;}
+
+.fS10 {font-size: 10px;}
+.fS12 {font-size: 12px;}
+.fS14 {font-size: 14px;}
+.fS16 {font-size: 16px;}
+.fS18 {font-size: 18px;}
+.fS20 {font-size: 20px;}
+.fS22 {font-size: 22px;}
+.fS24 {font-size: 24px;}
+.fS26 {font-size: 26px;}
+.fS28 {font-size: 28px;}
+.fS30 {font-size: 30px;}
+.fS32 {font-size: 32px;}
+.fS34 {font-size: 34px;}

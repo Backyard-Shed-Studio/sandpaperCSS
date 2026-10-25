@@ -1,0 +1,12 @@
+label.hiddenInput {
+    position: relative;
+}
+
+label.hiddenInput input {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}

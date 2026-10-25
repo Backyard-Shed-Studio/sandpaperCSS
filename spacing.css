@@ -1,0 +1,27 @@
+.marginAuto {margin: auto;}
+.marLeftAuto {margin-left: auto;}
+.marRightAuto {margin-right: auto;}
+
+.marTop5 {margin-top: min(5px, 0.5vw);}
+.marTop10 {margin-top: min(10px, 1vw);}
+.marTop20 {margin-top: min(20px, 3vw);}
+.marTop50 {margin-top: min(50px, 4vw);}
+.marTop100 {margin-top: min(100px, 6vw);}
+.marTop150 {margin-top: min(150px, 8vw);}
+.marTop200 {margin-top: min(200px, 10vw);}
+.marTop250 {margin-top: min(250px, 12vw);}
+
+.marBot5 {margin-bottom: min(5px, 0.5vw);}
+.marBot10 {margin-bottom: min(10px, 1vw);}
+.marBot20 {margin-bottom: min(20px, 0.9vw);}
+.marBot50 {margin-bottom: min(50px, 4vw);}
+.marBot100 {margin-bottom: min(100px, 6vw);}
+.marBot150 {margin-bottom: min(150px, 8vw);}
+.marBot200 {margin-bottom: min(200px, 10vw);}
+.marBot250 {margin-bottom: min(250px, 12vw);}
+
+.pad5 {padding: 5px;}
+.pad10 {padding: 10px;}
+.pad15 {padding: 15px;}
+.pad20 {padding: 20px;}
+.pad25 {padding: 25px;}

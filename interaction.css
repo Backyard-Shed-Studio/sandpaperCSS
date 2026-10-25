@@ -1,0 +1,9 @@
+.pointer {cursor: pointer;}
+.defaultCursor {cursor: default;}
+.noPointer {cursor: not-allowed;}
+.noSelection {user-select: none;}
+
+.noEvents {pointer-events: none;}
+.allEvents {pointer-events: all;}
+.noEvents_kidsEvents {pointer-events: none;}
+.noEvents_kidsEvents * {pointer-events: all;}

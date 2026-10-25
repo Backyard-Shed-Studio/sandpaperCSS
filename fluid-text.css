@@ -1,0 +1,63 @@
+/*
+  Fluid text: font sizes scale smoothly with the viewport width.
+  Between --fluid-vmin and --fluid-vmax, the base size and the type scale
+  go from their "min/small" value to their "max/large" value. Outside that range they stay fixed.
+
+  To customize in a project, redefine the settings in your own :root,
+  AFTER importing cposs. Example:
+
+    :root {
+      --fluid-vmin: 400px;
+      --base-max: 1.25rem;
+      --fluid-text-h1: calc(var(--base) * pow(var(--type-scale), 7));
+    }
+*/
+
+:root {
+  /* settings: override these in your project */
+  --fluid-vmin: 500px;
+  --fluid-vmax: 1000px;
+
+  --base-min: 1rem;
+  --base-max: 1.125rem;
+
+  --type-scale-small: 1.2;
+  --type-scale-large: 1.414;
+
+  /* calculations, never need to be updated */
+  /* progress(100vw, vmin, vmax) without progress(): tan(atan2(a, b)) = a / b, as a unitless number */
+  --fluid: clamp(0, tan(atan2(100vw - var(--fluid-vmin), var(--fluid-vmax) - var(--fluid-vmin))), 1);
+  --base: calc(var(--base-min) + var(--fluid) * (var(--base-max) - var(--base-min)));
+  --type-scale: calc(var(--type-scale-small) + var(--fluid) * (var(--type-scale-large) - var(--type-scale-small)));
+
+  /* steps above base: base * type-scale ^ step. Steps below base use the small ratio so they never shrink on big screens */
+  --fluid-text-xs: calc(var(--base) / pow(var(--type-scale-small), 2));
+  --fluid-text-s: calc(var(--base) / var(--type-scale-small));
+  --fluid-text-base: var(--base);
+  --fluid-text-l: calc(var(--base) * var(--type-scale));
+  --fluid-text-xl: calc(var(--base) * pow(var(--type-scale), 2));
+  --fluid-text-xxl: calc(var(--base) * pow(var(--type-scale), 3));
+
+  /* headings: the browser default heading sizes (h1 = 2em ... h6 = 0.67em), but relative to the fluid base */
+  --fluid-text-h6: calc(var(--base) * 0.67);
+  --fluid-text-h5: calc(var(--base) * 0.83);
+  --fluid-text-h4: var(--base);
+  --fluid-text-h3: calc(var(--base) * 1.17);
+  --fluid-text-h2: calc(var(--base) * 1.5);
+  --fluid-text-h1: calc(var(--base) * 2);
+}
+
+.fluidTextXS {font-size: var(--fluid-text-xs);}
+.fluidTextS {font-size: var(--fluid-text-s);}
+.fluidTextBase {font-size: var(--fluid-text-base);}
+.fluidTextL {font-size: var(--fluid-text-l);}
+.fluidTextXL {font-size: var(--fluid-text-xl);}
+.fluidTextXXL {font-size: var(--fluid-text-xxl);}
+
+/* Opt-in only: no tag is styled automatically. Any tag can use any class (an h1 with .fluidTextS is fine). */
+.fluidTextH1 {font-size: var(--fluid-text-h1);}
+.fluidTextH2 {font-size: var(--fluid-text-h2);}
+.fluidTextH3 {font-size: var(--fluid-text-h3);}
+.fluidTextH4 {font-size: var(--fluid-text-h4);}
+.fluidTextH5 {font-size: var(--fluid-text-h5);}
+.fluidTextH6 {font-size: var(--fluid-text-h6);}

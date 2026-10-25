@@ -1,0 +1,9 @@
+.block {display: block;}
+.inline {display: inline;}
+.inlineBlock {display: inline-block;}
+.inlineFlex {display: inline-flex;}
+.flex {display: flex;}
+.centered {display: grid; place-items: center;}
+
+.overflowHidden {overflow: hidden;}
+.noScroll {overflow: hidden;}

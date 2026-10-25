@@ -1,0 +1,19 @@
+{
+  "name": "cposs",
+  "version": "0.0.1",
+  "description": "Reusable CSS files shared across projects",
+  "license": "MIT",
+  "type": "module",
+  "style": "./index.css",
+  "exports": {
+    ".": "./index.css",
+    "./*.css": "./*.css",
+    "./*": "./*.css"
+  },
+  "files": [
+    "*.css"
+  ],
+  "sideEffects": [
+    "*.css"
+  ]
+}
