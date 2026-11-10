@@ -1,7 +1,7 @@
 {
-  "name": "cposs",
+  "name": "@shed/sandpaper",
   "version": "0.0.1",
-  "description": "Reusable CSS files shared across projects",
+  "description": "CSS utilities for Backyard Shed Studio projects",
   "license": "MIT",
   "type": "module",
   "style": "./index.css",
